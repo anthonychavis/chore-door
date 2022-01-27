@@ -198,6 +198,11 @@ p {
         display: none;
     }
 
+    main {
+        display: grid;
+        grid: 20vh repeat(2, 40vh) / repeat(3, 1fr) 28%;
+    }
+
     table {
         padding: 0 1rem;
     }
@@ -210,13 +215,15 @@ p {
         display: flex;
         flex-flow: wrap row;
         justify-content: space-around;
+        grid-area: 2 / 1 / span 2 / span 3;
+        align-items: center;
     }
 
     #section1 figure {
         padding: 0;
         cursor: pointer;
         margin: 0.15rem 0.5rem;
-        height: 190px;
+        height: 225px;
         width: auto;
     }
 
@@ -227,7 +234,10 @@ p {
 
     #section2 {
         padding: 0 0.5rem;
-        margin-right: 10vw;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin: auto;
     }
 
     button {
@@ -237,7 +247,7 @@ p {
     }
 
     #restart-btn {
-        margin-left: 10vw;
+        margin: 0.5rem;
     }
 
     p {
@@ -256,8 +266,11 @@ p {
         font-size: 1.5rem;
     }
 
+    #rules-btn {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+
     .landscape {
-        display: flex;
-        justify-content: space-between;
+        grid-area: 1 / 4 / span 2 / span 1;
     }
 }
