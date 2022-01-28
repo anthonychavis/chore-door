@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -27,9 +30,12 @@
 
     /* FONT */
     --font-mobile: 1.125rem;
+    --font-fam-1: 'Audiowide', cursive;
+    --font-fam-2: 'Black Ops One', cursive;
 }
 
 body {
+    font-family: var(--font-fam-1);
     color: var(--color-body);
     background-color: var(--bg-color-body);
     font-size: 1.25rem;
@@ -68,6 +74,7 @@ td {
 
 td:nth-child(odd) {
     font-size: 2rem;
+    font-family: var(--font-fam-2);
 }
 
 td:nth-child(even) {
@@ -91,6 +98,7 @@ button {
     margin: 1rem;
     background-image: var(--bg-btn);
     /* color: var(--color-body); */
+    font-family: var(--font-fam-2);
 }
 
 #section2 {
@@ -122,6 +130,7 @@ p {
     margin: 1rem auto;
     font-size: 2rem;
     font-weight: 600;
+    font-family: var(--font-fam-2);
 }
 
 .modal {
@@ -258,6 +267,7 @@ p {
     #rules-btn {
         grid-area: 1 / 2 / span 1 / span 1;
         margin: 0.5rem;
+        min-width: 190px;
     }
 
     #section1 {
