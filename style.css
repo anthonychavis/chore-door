@@ -150,15 +150,18 @@ p {
     display: none;
 }
 
-@media screen and (min-width: 481.1px) and (orientation: portrait) {
-    .mobile {
-        display: none;
-    }
+.mobile {
+    display: none;
 }
 
 @media screen and (max-width: 481px) {
     .big-screen {
         display: none;
+    }
+
+    .mobile {
+        display: block;
+        margin: 0.5rem auto;
     }
 
     table {
@@ -213,6 +216,11 @@ p {
         display: none;
     }
 
+    .mobile {
+        display: block;
+        margin: 0.5rem auto;
+    }
+
     body {
         display: grid;
         grid-template-rows: 15vh 1fr;
@@ -225,7 +233,7 @@ p {
     main {
         grid-area: 2 / span 1;
         display: grid;
-        grid: 20vh repeat(2, 30vh) / repeat(3, 1fr) 28%;
+        grid: 22vh repeat(2, 29vh) / repeat(3, 1fr) 32%;
     }
 
     button {
@@ -277,8 +285,8 @@ p {
         grid-area: 1 / 4 / span 3 / span 1;
         height: auto;
         display: grid;
-        grid: 20vh repeat(2, 30vh) / 1fr;
-        overflow: hidden;
+        grid: 22vh repeat(2, 29) / 1fr;
+        /* overflow: hidden; */
     }
 
     #restart-btn {
