@@ -6,10 +6,20 @@
 
 :root {
     /* COLORS */
-    --color1: rgb(0, 255, 255);
+    --color1: linear-gradient(
+        115deg,
+        rgb(0, 255, 255) 0%,
+        rgb(233, 191, 250) 95%
+    );
+    --bg-header: rgb(0, 255, 255);
     --color-body: rgb(245, 222, 179);
     --bg-color-body: rgb(0, 0, 139);
     --bg-overlay: rgba(0, 0, 0, 0.7);
+    --bg-btn: linear-gradient(
+        335deg,
+        /* rgb(172, 221, 173) 0%, */ rgb(0, 255, 255) 0%,
+        rgb(233, 191, 250) 80%
+    );
 
     /* PADDING */
     --padding1: 0.625rem;
@@ -29,7 +39,8 @@ body {
 
 header {
     padding: var(--padding1);
-    background-color: var(--color1);
+    background-color: var(--bg-header);
+    /* background-image: var(--color1); */
     display: flex;
     justify-content: center;
 }
@@ -43,6 +54,7 @@ main {
     /* padding: var(--padding1); */
     text-align: center;
     position: relative;
+    background: var();
 }
 
 table {
@@ -77,6 +89,8 @@ button {
     cursor: pointer;
     border-radius: 10px;
     margin: 1rem;
+    background-image: var(--bg-btn);
+    /* color: var(--color-body); */
 }
 
 #section2 {
@@ -102,7 +116,8 @@ p {
 .counter {
     border-radius: 10px;
     padding: 1rem 2rem;
-    background-color: var(--color1);
+    /* background-color: var(--color1); */
+    background-image: var(--color1);
     color: var(--bg-color-body);
     margin: 1rem auto;
     font-size: 2rem;
@@ -198,9 +213,19 @@ p {
         display: none;
     }
 
-    main {
+    body {
         display: grid;
-        grid: 25vh repeat(2, 40vh) / repeat(3, 1fr) 28%;
+        grid-template-rows: 15vh 1fr;
+    }
+
+    header {
+        grid-area: 1 / span 1;
+    }
+
+    main {
+        grid-area: 2 / span 1;
+        display: grid;
+        grid: 20vh repeat(2, 30vh) / repeat(3, 1fr) 28%;
     }
 
     button {
@@ -251,7 +276,8 @@ p {
         grid-area: 1 / 4 / span 3 / span 1;
         height: auto;
         display: grid;
-        grid: 25vh repeat(2, 40vh) / 1fr;
+        grid: 20vh repeat(2, 30vh) / 1fr;
+        overflow: hidden;
     }
 
     #restart-btn {
