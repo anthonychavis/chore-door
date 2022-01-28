@@ -200,7 +200,18 @@ p {
 
     main {
         display: grid;
-        grid: 20vh repeat(2, 40vh) / repeat(3, 1fr) 28%;
+        grid: 25vh repeat(2, 40vh) / repeat(3, 1fr) 28%;
+    }
+
+    button {
+        font-size: var(--font-mobile);
+        margin: 1rem 0.5rem 0 0.5rem;
+        padding: 0.5rem;
+    }
+
+    p {
+        font-size: var(--font-mobile);
+        padding: 0;
     }
 
     table {
@@ -209,6 +220,10 @@ p {
 
     td:nth-child(even) {
         padding-left: 0.5rem;
+    }
+
+    #rules-btn {
+        grid-area: 1 / 2 / span 1 / span 1;
     }
 
     #section1 {
@@ -232,25 +247,24 @@ p {
         height: 100%;
     }
 
+    .landscape {
+        grid-area: 1 / 4 / span 3 / span 1;
+        height: auto;
+        display: grid;
+        grid: 25vh repeat(2, 40vh) / 1fr;
+    }
+
+    #restart-btn {
+        margin: 1rem auto 0 auto;
+        width: 60%;
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
     #section2 {
         padding: 0 0.5rem;
         display: flex;
         flex-flow: column;
-    }
-
-    button {
-        font-size: var(--font-mobile);
-        margin: 0.5rem;
-        padding: 0.5rem;
-    }
-
-    #restart-btn {
-        margin: 0.5rem;
-    }
-
-    p {
-        font-size: var(--font-mobile);
-        padding: 0;
+        grid-area: 2 / 1 / span 2 / span 1;
     }
 
     .score {
@@ -262,13 +276,5 @@ p {
         margin: 0.5rem auto;
         padding: 0.75rem 1.5rem;
         font-size: 1.5rem;
-    }
-
-    #rules-btn {
-        grid-area: 1 / 2 / span 1 / span 1;
-    }
-
-    .landscape {
-        grid-area: 1 / 4 / span 3 / span 1;
     }
 }
