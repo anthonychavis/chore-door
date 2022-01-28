@@ -193,7 +193,7 @@ p {
     }
 }
 
-@media screen and (max-width: 768.5px) and (orientation: landscape) {
+@media screen and (max-width: 926.5px) and (orientation: landscape) {
     .big-screen {
         display: none;
     }
