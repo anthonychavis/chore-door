@@ -5,8 +5,10 @@ const closedDoor =
     'https://content.codecademy.com/projects/chore-door/images/closed_door.svg';
 const robotDoor =
     'https://content.codecademy.com/projects/chore-door/images/robot.svg';
-const beachImage = 'https://content.codecademy.com/projects/chore-door/images/beach.svg';
-const spaceImage = 'https://content.codecademy.com/projects/chore-door/images/space.svg';
+const beachImage =
+    'https://content.codecademy.com/projects/chore-door/images/beach.svg';
+const spaceImage =
+    'https://content.codecademy.com/projects/chore-door/images/space.svg';
 
 // door elements
 const door1 = document.getElementById('door1');
@@ -26,25 +28,27 @@ let currentlyPlaying;
 let numClosedDoors;
 let currentStreakNum = 0;
 let bestStreakNum = 0;
-let doors = [robotDoor, beachImage, spaceImage]
+let doors = [robotDoor, beachImage, spaceImage];
 
-const shuffle = (array) => {
-  let currentIndex = array.length,  randomIndex;
+const shuffle = array => {
+    let currentIndex = array.length,
+        randomIndex;
 
-  // While there remain elements to shuffle...
-  while (currentIndex != 0) {
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex],
+            array[currentIndex],
+        ];
+    }
 
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-
-  return array;
-}
+    return array;
+};
 const gameBegin = () => {
     numClosedDoors = 3;
     currentlyPlaying = true;
@@ -53,7 +57,7 @@ const gameBegin = () => {
     door1.src = closedDoor;
     door2.src = closedDoor;
     door3.src = closedDoor;
-    shuffle(doors);    
+    shuffle(doors);
 };
 gameBegin();
 
@@ -85,7 +89,7 @@ door3.addEventListener('click', () => {
 const playDoor = door => {
     numClosedDoors--;
 
-    if (numClosedDoors === 0) {
+    if (numClosedDoors === 1 && door.src !== robotDoor) {
         gameOver('win');
         // } else if (isBot(door)) {
     } else if (door.src === robotDoor) {
