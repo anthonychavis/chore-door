@@ -306,9 +306,10 @@ p {
 
     #section2 {
         padding: 0 0.5rem;
-        display: flex;
         flex-flow: column;
         grid-area: 2 / 1 / span 2 / span 1;
+        justify-content: space-around;
+        line-height: 1.1;
     }
 
     .score {
