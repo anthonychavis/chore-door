@@ -19,8 +19,6 @@ In the project lesson there was no instruction on how to set up the score keepin
 
 I am grateful to have had a [friend](https://github.com/jnoreiga) challenge me to better randomize which image appears behind each door. My attempt at this was quite messy. Luckily he showed a simple way of achieving this via his contribution to the project.
 
-I need more practice thinking through my functions when creating them. Noticing the progress I have made is one of the biggest motivators to keep pushing forward in this journey. Something I look forward to learning is how JavaScript can improve accessibility and the user experience.
-
 ## Technologies
 
 -   JavaScript
@@ -40,8 +38,6 @@ I need more practice thinking through my functions when creating them. Noticing 
 
 This project is based on [Codecademy's Chore Door project](https://content.codecademy.com/projects/chore-door/chore-door-final/index.html). The project lesson is [Building Interactive JavaScript Websites: JavaScript Interactive Websites - Chore Door](https://www.codecademy.com/courses/build-interactive-websites/projects/chore-door).
 
-The README layout was inspired by [Rita Łyczywek](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
 ## Contact
 
-Created by [Anthony Chavis](gitanthony@yahoo.com).
+[Anthony Chavis](gitanthony@yahoo.com).
