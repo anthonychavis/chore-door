@@ -40,7 +40,10 @@ body {
     background-color: var(--bg-color-body);
     font-size: 1.25rem;
     line-height: 1.5;
-    /* padding: 0 0.625rem; */
+
+    /* resolving mobile browser view. see script.js */
+    /* height: 100vh; */
+    height: calc(var(--vh, 1vh));
 }
 
 header {
