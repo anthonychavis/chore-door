@@ -32,6 +32,11 @@
     --font-mobile: 1.125rem;
     --font-fam-1: 'Audiowide', cursive;
     --font-fam-2: 'Black Ops One', cursive;
+
+    /* BORDER */
+    --body-border: 2px solid red;
+    --header-border: 2px solid orange;
+    --main-border: 4px solid green;
 }
 
 body {
@@ -89,7 +94,7 @@ td:nth-child(even) {
     padding: 0;
     cursor: pointer;
     margin: 1rem 2.5rem;
-    height: 100%;
+    /* height: 100%; */
 }
 
 button {
@@ -133,9 +138,7 @@ p {
     /* background-color: var(--color1); */
     background-image: var(--color1);
     color: var(--bg-color-body);
-    margin-top: 1rem;
-    margin: 1rem auto;
-    margin-inline: auto;
+    margin: 1rem auto 0;
     font-size: 2rem;
     font-weight: 600;
     font-family: var(--font-fam-2);
@@ -173,6 +176,7 @@ p {
     display: none;
 }
 
+/* PORTRAIT */
 @media screen and (max-width: 481px) {
     .big-screen {
         display: none;
@@ -181,6 +185,11 @@ p {
     .mobile {
         display: block;
         margin: 0.5rem auto;
+    }
+
+    header {
+        padding: 10px;
+        padding: min(0.4rem, 10px);
     }
 
     table {
@@ -233,6 +242,7 @@ p {
     }
 }
 
+/* LANDSCAPE */
 @media screen and (max-width: 926.5px) and (orientation: landscape) {
     .big-screen {
         display: none;
@@ -245,23 +255,30 @@ p {
 
     body {
         display: grid;
-        grid-template-rows: 15vh 1fr;
+        grid-template-rows: 30px 1fr;
+        grid-template-rows: minmax(30px, 2.2rem) 1fr;
+        /* border: var(--body-border); */
     }
 
     header {
         grid-area: 1 / span 1;
+        padding: 0.1rem;
+        /* border: var(--header-border); */
     }
 
     main {
         grid-area: 2 / span 1;
         display: grid;
         grid: 22vh repeat(2, 29vh) / repeat(3, 1fr) 32%;
+        /* border: var(--body-border); */
     }
 
     button {
         font-size: var(--font-mobile);
         margin: 1rem 0.5rem 0 0.5rem;
+        /* padding: 0.5%; */
         padding: 0.5rem;
+        /* border: var(--main-border); */
     }
 
     p {
