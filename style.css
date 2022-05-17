@@ -34,7 +34,7 @@
     --font-fam-2: 'Black Ops One', cursive;
 
     /* BORDER */
-    --body-border: 2px solid red;
+    --body-border: 4px solid red;
     --header-border: 2px solid orange;
     --main-border: 4px solid green;
 }
@@ -269,14 +269,13 @@ p {
     main {
         grid-area: 2 / span 1;
         display: grid;
-        grid: 22vh repeat(2, 29vh) / repeat(3, 1fr) 32%;
-        /* border: var(--body-border); */
+        grid: 25vh repeat(2, 29vh) / repeat(3, 1fr) 32%;
+        border: var(--body-border);
     }
 
     button {
         font-size: var(--font-mobile);
         margin: 1rem 0.5rem 0 0.5rem;
-        /* padding: 0.5%; */
         padding: 0.5rem;
         /* border: var(--main-border); */
     }
@@ -302,45 +301,42 @@ p {
     }
 
     #section1 {
-        display: flex;
-        flex-flow: wrap row;
-        justify-content: space-around;
         grid-area: 2 / 1 / span 2 / span 3;
+        display: flex;
+        /* flex-flow: wrap row; */
+        justify-content: space-around;
         align-items: center;
+        /* border: var(--main-border); */
     }
 
     #section1 figure {
+        flex-flow: wrap;
         padding: 0;
         cursor: pointer;
         margin: 0.15rem 0.5rem;
         width: auto;
         inline-size: auto;
-    }
-
-    .door img {
-        width: auto;
-        inline-size: auto;
-        inline-size: auto;
-        height: 100%;
-    }
-
-    .landscape {
-        grid-area: 1 / 4 / span 3 / span 1;
-        height: auto;
-        display: grid;
-        grid: 22vh repeat(2, 29) / 1fr;
+        max-height: 100%;
+        max-block-size: 100%;
         /* overflow: hidden; */
     }
 
+    /* .door img {
+        width: 100%;
+        inline-size: 100%;
+        height: 100%;
+        height: auto;
+    } */
+
     #restart-btn {
-        margin: 0.5rem auto;
-        grid-area: 1 / 1 / span 1 / span 1;
+        margin: 0.5rem;
+        grid-area: 1 / 4 / span 1 / span 1;
     }
 
     #section2 {
         padding: 0 0.5rem;
         flex-flow: column;
-        grid-area: 2 / 1 / span 2 / span 1;
+        grid-area: 2 / 4 / span 2 / span 1;
         justify-content: space-around;
         line-height: 1.1;
     }
