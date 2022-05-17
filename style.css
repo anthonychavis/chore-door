@@ -79,6 +79,7 @@ td:nth-child(odd) {
 
 td:nth-child(even) {
     max-width: 600px;
+    max-inline-size: 600px;
     padding-left: 1rem;
     text-align: left;
 }
@@ -113,6 +114,7 @@ button {
     flex-flow: column;
     align-items: center;
     min-width: 205px;
+    min-inline-size: 205px;
 }
 
 p {
@@ -120,6 +122,9 @@ p {
     font-size: 1.5rem;
     display: inline;
     width: 100%;
+    inline-size: 100%;
+    /* match height */
+    flex: 1;
 }
 
 .counter {
@@ -128,7 +133,9 @@ p {
     /* background-color: var(--color1); */
     background-image: var(--color1);
     color: var(--bg-color-body);
+    margin-top: 1rem;
     margin: 1rem auto;
+    margin-inline: auto;
     font-size: 2rem;
     font-weight: 600;
     font-family: var(--font-fam-2);
@@ -138,6 +145,7 @@ p {
     position: absolute;
     height: 80vh;
     width: 65vw;
+    inline-size: 65vw;
     overflow: auto;
     background-color: var(--bg-color-body);
     /* top: 50%; */
@@ -151,6 +159,7 @@ p {
     background: var(--bg-overlay);
     height: 100%;
     width: 100%;
+    inline-size: 100%;
     position: absolute;
     filter: blur(1rem);
     bottom: 0;
@@ -194,10 +203,12 @@ p {
         margin: 0.15rem 0.5rem;
         height: 190px;
         width: auto;
+        inline-size: auto;
     }
 
     .door img {
         width: auto;
+        inline-size: auto;
         height: 100%;
     }
 
@@ -218,6 +229,7 @@ p {
     .score {
         margin: 0;
         min-width: 180px;
+        min-inline-size: 180px;
     }
 }
 
@@ -269,6 +281,7 @@ p {
         grid-area: 1 / 2 / span 1 / span 1;
         margin: 0.5rem;
         min-width: 190px;
+        min-inline-size: 190px;
     }
 
     #section1 {
@@ -284,10 +297,13 @@ p {
         cursor: pointer;
         margin: 0.15rem 0.5rem;
         width: auto;
+        inline-size: auto;
     }
 
     .door img {
         width: auto;
+        inline-size: auto;
+        inline-size: auto;
         height: 100%;
     }
 
@@ -315,6 +331,7 @@ p {
     .score {
         margin: 0;
         min-width: 180px;
+        min-inline-size: 180px;
     }
 
     .counter {
