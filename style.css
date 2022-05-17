@@ -40,10 +40,7 @@ body {
     background-color: var(--bg-color-body);
     font-size: 1.25rem;
     line-height: 1.5;
-
-    /* resolving mobile browser view. see script.js */
-    /* height: 100vh; */
-    height: calc(var(--vh, 1vh));
+    /* padding: 0 0.625rem; */
 }
 
 header {
@@ -91,6 +88,7 @@ td:nth-child(even) {
     padding: 0;
     cursor: pointer;
     margin: 1rem 2.5rem;
+    height: 100%;
 }
 
 button {
@@ -285,7 +283,6 @@ p {
         padding: 0;
         cursor: pointer;
         margin: 0.15rem 0.5rem;
-        height: 225px;
         width: auto;
     }
 

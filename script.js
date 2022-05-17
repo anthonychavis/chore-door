@@ -137,17 +137,4 @@ const closeRules = () => {
 
 overlay.addEventListener('click', closeRules);
 
-// resolving mobile browser view. see style.css
-let sizeFire = 0;
-// listen for resize event
-window.addEventListener('resize', () => {
-    // obtain viewport height. multiply by 1% to get value for a vh unit
-    let vh = window.innerHeight;
-    // set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-    console.log(sizeFire++);
-});
-// first run w/o debounce concern
-
 // add in local storage to maintain the the highscore. Also add date the high score was acheived - if w/in the last week, show number of days ago.
