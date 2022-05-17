@@ -270,7 +270,7 @@ p {
         grid-area: 2 / span 1;
         display: grid;
         grid: 25vh repeat(2, 29vh) / repeat(3, 1fr) 32%;
-        border: var(--body-border);
+        /* border: var(--body-border); */
     }
 
     button {
