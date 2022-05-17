@@ -187,6 +187,10 @@ p {
         padding: min(0.4rem, 10px);
     }
 
+    main {
+        padding: 0;
+    }
+
     table {
         padding: 0 1rem;
     }
@@ -265,6 +269,7 @@ p {
         grid-area: 2 / span 1;
         display: grid;
         grid: 25vh repeat(2, 29vh) / repeat(3, 1fr) 32%;
+        padding: 0;
     }
 
     button {
